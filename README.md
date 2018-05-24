@@ -1,5 +1,5 @@
 # NFWdist
-This module lets you sample from the NFW as a true PDF with the only variable being the concerntration (con in the package).
+This module lets you sample from the NFW as a true PDF with the only variable being the concentration (con in the package).
 
 # Load
 
