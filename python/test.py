@@ -16,8 +16,10 @@ def main():
 
   #Both the qnfw should be the inverse of pnfw
   print "Checking qnfw inverts pnfw, should return input vector [1:9]/10"
-  for con in [1,5,10,20]:
-    print str(r'con = %d: ' % con), (qnfw(pnfw(np.arange(1,10)/10.0,con=con), con=con))
+  con = [1, 5, 10, 20]
+  prob = pnfw(np.arange(1,10)/10.0,con=con)
+  for i, j in enumerate(con):
+    print "con = ", j, ":", qnfw(prob[0:,i], con=j)
 
   # First some simple timing tests
   print "Timing tests in seconds"
@@ -32,6 +34,7 @@ def main():
     for i in range(1000):
       rnfw(1e4,con=con)
     print str(r'con = %d: ' % con), (time.time()-start)/1000.0
+
 
   # Some plots of the analytic and randomly-drawn NFW PDF
   print "Plotting random draws against PDF for nsamples=100,000:"
