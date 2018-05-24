@@ -13,5 +13,5 @@ Run:
 ```
 python test.py
 ```
-for some simple timing check compared to the Uniform distribution and to see that that our random draws (using the rnfw via the qnfw function) produces the right PDFs (as per dnfw):
+for some simple timing checks compared to the Uniform distribution and to see that that our random draws (using the rnfw via the qnfw function) produces the right PDFs (as per dnfw):
 
