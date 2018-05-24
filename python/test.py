@@ -12,12 +12,12 @@ def main():
   #Both the PDF (dnfw) integrated up to x, and CDF at q should be the same:
   print "Checking CDF and integral of PDF, should be the same:"
   for con in [1,5,10,20]:
-    print integrate.quad(dnfw, 0, 0.5, args=(con))[0], pnfw(0.5, con=con)
+    print str(r'con = %d: ' % con), integrate.quad(dnfw, 0, 0.5, args=(con))[0], pnfw(0.5, con=con)
 
   #Both the qnfw should be the inverse of pnfw
   print "Checking qnfw inverts pnfw, should return input vector [1:9]/10"
   for con in [1,5,10,20]:
-    print(qnfw(pnfw(np.arange(1,10)/10.0,con=con), con=con))
+    print str(r'con = %d: ' % con), (qnfw(pnfw(np.arange(1,10)/10.0,con=con), con=con))
 
   # First some simple timing tests
   print "Timing tests in seconds"
