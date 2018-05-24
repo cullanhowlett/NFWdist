@@ -7,8 +7,8 @@ r"""  The Standard Distribution Functions for the 3D NFW Profile
 
       Usage:
       dnfw(x, con = 5, log = FALSE)
-      pnfw(q, con = 5, log.p = FALSE)
-      qnfw(p, con = 5, log.p = FALSE)
+      pnfw(q, con = 5, logp = FALSE)
+      qnfw(p, con = 5, logp = FALSE)
       rnfw(n, con = 5)
 
       dnfw gives the density, pnfw gives the distribution function, qnfw gives the quantile function, and rnfw generates random deviates.
@@ -34,11 +34,11 @@ r"""  The Standard Distribution Functions for the 3D NFW Profile
 
       Notes:
         The novel part of this package is the general solution for the CDF inversion (i.e. qnfw). 
-        As far as I can see this has not been published anywhere, and it is a useful function for populating halos in something like an HOD.
+        As far as we can see this has not been published anywhere, and it is a useful function for populating halos in something like an HOD.
         This seems to work at least as efficiently as accept/reject, but it is ultimately much more elegant code in any case.
 
-      Author:
-      Cullan Howlett
+      Authors:
+        Cullan Howlett
 """
 
 def pnfwunorm(q, con=5):
