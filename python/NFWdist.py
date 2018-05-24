@@ -38,7 +38,7 @@ r"""  The Standard Distribution Functions for the 3D NFW Profile
         This seems to work at least as efficiently as accept/reject, but it is ultimately much more elegant code in any case.
 
       Authors:
-        Cullan Howlett
+        Cullan Howlett & Aaron Robotham
 """
 
 def pnfwunorm(q, con=5):
